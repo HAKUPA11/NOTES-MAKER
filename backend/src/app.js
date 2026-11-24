@@ -5,11 +5,13 @@
 
 const express=require('express');
 const noteModel=require('./models/notes.model.js');
+const cors=require('cors')
 
 const app=express();
 
 const notes=[];
 
+app.use(cors())
 app.use(express.json())
 
 /**
